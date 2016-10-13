@@ -75,4 +75,17 @@ trait MutableAttributesTrait {
     return $this->attributes->createTag($tagName);
   }
 
+  /**
+   * @param $key
+   * @param $value
+   *
+   * @return $this
+   *
+   * @see AttributesTrait::setAttribute()
+   */
+  public function setAttribute($key, $value) {
+    $this->attributes = $this->attributes->setAttribute($key, $value);
+    return $this;
+  }
+
 }
